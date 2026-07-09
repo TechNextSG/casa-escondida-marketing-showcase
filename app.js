@@ -3,6 +3,15 @@
 var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 var fine   = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
 
+// ── Ambient day <-> night cycle (slow) — recolours the whole site + shows orbs ──
+if(!reduce){
+  var isNight = false;
+  setInterval(function(){
+    isNight = !isNight;
+    document.documentElement.classList.toggle('night', isNight);
+  }, 13000);
+}
+
 // ── Reveal on scroll ──
 var io = new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
