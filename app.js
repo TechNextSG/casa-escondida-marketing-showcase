@@ -155,16 +155,17 @@ if(fine && !reduce){
   });
 })();
 
-// ── Video reels/clips: play on hover (and tap), pause on leave ──
+// ── Video reels/clips: autoplay muted while in view, pause off-screen ──
 (function(){
-  document.querySelectorAll('[data-video]').forEach(function(box){
-    var v = box.querySelector('video'); if(!v) return;
-    function play(){ box.classList.add('playing'); var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
-    function stop(){ box.classList.remove('playing'); try{v.pause();}catch(e){} }
-    box.addEventListener('mouseenter', play);
-    box.addEventListener('mouseleave', stop);
-    box.addEventListener('click', function(){ if(v.paused) play(); else stop(); });
-  });
+  var boxes = [].slice.call(document.querySelectorAll('[data-video]'));
+  if(!boxes.length) return;
+  function play(box){ var v=box.querySelector('video'); if(!v) return; box.classList.add('playing'); var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
+  function stop(box){ var v=box.querySelector('video'); if(!v) return; box.classList.remove('playing'); try{v.pause();}catch(e){} }
+  // click toggles play/pause (mobile / manual control)
+  boxes.forEach(function(box){ box.addEventListener('click', function(){ var v=box.querySelector('video'); if(!v)return; if(v.paused) play(box); else stop(box); }); });
+  if(reduce) return; // reduced motion: show the poster frame, no autoplay
+  var vio = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) play(e.target); else stop(e.target); }); }, {threshold:.3});
+  boxes.forEach(function(b){ vio.observe(b); });
 })();
 
 // ── Smooth in-page anchor scroll ──
