@@ -613,4 +613,4 @@ img{display:block;max-width:100%;}
 @keyframes drift1{0%,100%{transform:translate(0,0)}25%{transform:translate(70px,90px)}50%{transform:translate(-50px,140px)}75%{transform:translate(-90px,50px)}}
 @keyframes drift2{0%,100%{transform:translate(0,0)}33%{transform:translate(-100px,70px)}66%{transform:translate(80px,-60px)}}
 @keyframes drift3{0%,100%{transform:translate(0,0)}20%{transform:translate(60px,-80px)}50%{transform:translate(-70px,-40px)}80%{transform:translate(50px,100px)}}
-@media(prefers-reduced-motion:reduce){#orbs{display:none;}.orb{animation:none;}}
+@media(prefers-reduced-motion:reduce){.orb{animation:none;}}
