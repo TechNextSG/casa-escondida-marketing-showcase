@@ -94,40 +94,6 @@ if(fine && !reduce){
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') shut(); });
 })();
 
-// ── AI "Generate" micro-interaction ──
-(function(){
-  var btn = document.getElementById('genBtn'), grid = document.getElementById('aiGrid');
-  if(!btn || !grid) return;
-  var pool = ['img/showcase/uw-2.webp','img/showcase/uw-4.jpg','img/showcase/uw-5.jpg','img/showcase/uw-7.webp','img/showcase/uw-8.webp','img/showcase/uw-10.webp','img/showcase/rf-2.jpg','img/showcase/rf-6.webp','img/showcase/uw-3.webp','img/showcase/rf-1.webp','img/showcase/rf-3.webp'];
-  var caps = ['AI image — vivid macro','AI image — reef study','AI image — critter portrait','AI image — coral scene','AI image — signature species'];
-  var pi = 0, ci = 0;
-  btn.addEventListener('click', function(){
-    var slot = grid.querySelector('.ai-card2[data-slot]:not(.filled)');
-    if(!slot){ // all filled: reset slots to generate again
-      grid.querySelectorAll('.ai-card2[data-slot]').forEach(function(s){ s.classList.remove('filled'); s.removeAttribute('data-lightbox'); var i=s.querySelector('img'); if(i) i.src=''; });
-      slot = grid.querySelector('.ai-card2[data-slot]:not(.filled)');
-    }
-    if(!slot) return;
-    var src = pool[pi % pool.length]; pi++;
-    var cap = caps[ci % caps.length]; ci++;
-    btn.classList.add('busy');
-    if(reduce){ finish(); return; }
-    slot.classList.add('generating');
-    var im = slot.querySelector('img');
-    // preload
-    var pre = new Image(); pre.src = src;
-    setTimeout(finish, 1150);
-    function finish(){
-      if(im) im.src = src;
-      slot.classList.remove('generating');
-      slot.classList.add('filled');
-      slot.setAttribute('data-lightbox', src);
-      slot.setAttribute('data-cap', cap);
-      btn.classList.remove('busy');
-    }
-  });
-})();
-
 // ── Before/After slider (guarded) ──
 (function(){
   var ba = document.getElementById('ba1'); if(!ba) return;

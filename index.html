@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=8"/>
+<link rel="stylesheet" href="styles.css?v=9"/>
 </head>
 <body>
 <div id="pg-bar"></div>
@@ -220,35 +220,22 @@
 <section class="pillar sec-alt" id="ai">
   <div class="inner">
     <div class="sec-head rv">
-      <div class="sec-eyebrow">03 · AI Video &amp; Image Generation</div>
+      <div class="sec-eyebrow">03 · AI Video Generation</div>
       <h2 class="sec-h2">Cinematic visuals, <em>on demand</em></h2>
-      <p class="sec-sub">No boat, no film crew, no waiting on weather. The clips below are AI-generated promo video for ads, reels and the website. <b>Hover a clip</b> to play — and <b>hit Generate</b> to add a still.</p>
-    </div>
-
-    <div class="ai-toolbar rv">
-      <div class="ai-prompt"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg><span>"Sunrise over Batangas Bay, diver descending into a coral garden…"</span><span class="cursor"></span></div>
-      <button class="ai-gen-btn" id="genBtn"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>Generate</button>
+      <p class="sec-sub">No boat, no film crew, no waiting on weather — promo clips generated for ads, reels and the website. A sample set, playing on loop.</p>
     </div>
 
     <div class="ai-grid four" id="aiGrid">
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a1.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a2.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a3.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a4.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a5.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a6.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a7.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay src="img/ai/a8.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 01 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 02 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 03 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 04 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 05 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 06 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 07 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 08 · Generate</span></span></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a1.mp4"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a2.mp4"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a3.mp4"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a4.mp4"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a5.mp4"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a6.mp4"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a7.mp4"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" autoplay muted loop playsinline preload="metadata" src="img/ai/a8.mp4"></video></div>
     </div>
-    <p class="panel-note rv" style="text-align:center;margin-top:1.4rem;">8 AI video clips + 8 image slots — hover a clip to play, hit Generate to fill a still.</p>
+    <p class="panel-note rv" style="text-align:center;margin-top:1.4rem;">8 sample AI-generated clips, looping on mute — more drop in as the library grows.</p>
   </div>
 </section>
 
@@ -272,6 +259,6 @@
   <div class="lb-cap" id="lbCap"></div>
 </div>
 
-<script src="app.js?v=8" defer></script>
+<script src="app.js?v=9" defer></script>
 </body>
 </html>
