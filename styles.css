@@ -474,3 +474,66 @@ img{display:block;max-width:100%;}
 .lightbox-close{position:absolute;top:1.3rem;right:1.5rem;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;z-index:2;}
 .lightbox-close:hover{background:var(--teal);color:#04080f;border-color:var(--teal);transform:rotate(90deg);}
 .lb-cap{position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;color:rgba(255,255,255,.8);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;}
+
+/* =====================================================================
+   REVAMP v5 — visual-first: social post cards, website view, close band
+===================================================================== */
+
+/* Pillar tags (chips under a pillar header) */
+.pillar-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-top:1.3rem;}
+.pillar-tag{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.4rem .95rem;border:1px solid var(--border2);border-radius:30px;color:var(--text2);transition:all .25s;}
+.pillar-tag:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-g);transform:translateY(-2px);}
+
+/* ── SOCIAL FEED — 5 post cards ── */
+.feed-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.3rem;}
+@media(max-width:1100px){.feed-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:680px){.feed-grid{grid-template-columns:repeat(2,1fr);gap:.9rem;}}
+.post{position:relative;overflow:hidden;background:var(--card2);border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;}
+.post-head{display:flex;align-items:center;gap:.55rem;padding:.75rem .85rem;}
+.post-ava{width:32px;height:32px;border-radius:50%;padding:2px;background:linear-gradient(135deg,var(--accent),var(--teal));flex-shrink:0;}
+.post-ava img{width:100%;height:100%;border-radius:50%;object-fit:contain;background:#04141f;padding:2px;}
+.post-hmeta{flex:1;line-height:1.15;overflow:hidden;}
+.post-hmeta b{font-size:.7rem;color:var(--text);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.post-hmeta span{font-size:.58rem;color:var(--text3);}
+.post-dots{color:var(--text3);letter-spacing:1.5px;font-size:.8rem;}
+.post-media{position:relative;aspect-ratio:1;overflow:hidden;cursor:pointer;background:var(--bg2);}
+.post-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform .9s cubic-bezier(.22,1,.36,1);z-index:1;}
+.post-media:hover img,.post-media.show img{transform:scale(1);}
+.post-ph{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;color:var(--text3);background:var(--bg2);transition:opacity .5s ease;}
+.post-ph::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(26,107,152,.04) 25%,rgba(77,194,232,.13) 50%,rgba(26,107,152,.04) 75%);background-size:200% 100%;animation:sk 2s linear infinite;}
+.post-media:hover .post-ph,.post-media.show .post-ph{opacity:0;pointer-events:none;}
+.post-ph .pn{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--accent);opacity:.5;line-height:1;}
+.post-ph .pl{font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;}
+.post-hint{position:absolute;bottom:9px;right:9px;z-index:4;font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(4,8,15,.55);padding:3px 8px;border-radius:20px;transition:opacity .35s;pointer-events:none;}
+.post-media:hover .post-hint,.post-media.show .post-hint{opacity:0;}
+.post-actions{display:flex;align-items:center;gap:.85rem;padding:.65rem .85rem .3rem;color:var(--text2);}
+.post-actions svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;cursor:pointer;transition:stroke .2s,transform .25s;}
+.post-actions svg:hover{transform:scale(1.18);}
+.post-actions .heart:hover{stroke:#e0526b;fill:#e0526b;}
+.post-actions .save{margin-left:auto;}
+.post-cap{padding:.15rem .85rem 1rem;display:flex;flex-direction:column;gap:.45rem;}
+.post-cap .cl{height:8px;border-radius:5px;background:var(--bg2);position:relative;overflow:hidden;}
+.post-cap .cl.w80{width:80%;}.post-cap .cl.w55{width:55%;}
+
+/* ── WEBSITE — single whole-site view ── */
+.web-wrap{max-width:1000px;margin:0 auto;}
+.web-note{text-align:center;margin-top:1.3rem;}
+
+/* ── AI grid: 6 (3×2) ── */
+.ai-grid.six{grid-template-columns:repeat(3,1fr);}
+@media(max-width:820px){.ai-grid.six{grid-template-columns:repeat(2,1fr);}}
+
+/* ── Closing visual band ── */
+.close-band{position:relative;overflow:hidden;padding:6.5rem 2rem;text-align:center;}
+.close-band .cb-bg{position:absolute;inset:0;z-index:0;}
+.close-band .cb-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:brightness(.4);transform:scale(1.05);transition:transform 6s ease;}
+.close-band:hover .cb-bg img{transform:scale(1.12);}
+.close-band .cb-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(4,8,15,.74),rgba(4,30,55,.6));}
+.close-band .cb-in{position:relative;z-index:2;max-width:660px;margin:0 auto;color:#fff;}
+.close-band .cb-eyebrow{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;}
+.close-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:400;margin-bottom:1rem;line-height:1.2;}
+.close-band h2 em{font-style:italic;color:var(--teal);}
+.close-band p{color:rgba(255,255,255,.85);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.55;margin-bottom:1.8rem;}
+.close-link{display:inline-flex;align-items:center;gap:.5rem;color:#fff;text-decoration:none;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:.3rem;transition:gap .3s,color .3s,border-color .3s;}
+.close-link:hover{gap:.9rem;color:var(--teal);border-color:var(--teal);}
+.close-link svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;}
