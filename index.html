@@ -6,481 +6,390 @@
 <title>Digital Marketing Showcase — Casa Escondida Anilao | TechNext</title>
 <meta name="description" content="A digital marketing showcase by TechNext for Casa Escondida Anilao — a PADI 5-Star dive resort in Anilao, Batangas, the macro-diving capital of the Philippines."/>
 <meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" type="image/webp" href="img/logo-white.webp"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config={theme:{extend:{colors:{ocean:{'DEFAULT':'#04080f','mid':'#071427','light':'#0c2038'},teal:{'DEFAULT':'#4dc2e8','light':'#7dd6f0','pale':'#b6ecfb','dark':'#2e9fc4'},sand:{'DEFAULT':'#f5f0ea','dark':'#eae3d8','deeper':'#ddd5c8'}},fontFamily:{display:['Playfair Display','Georgia','serif'],serifcg:['Cormorant Garamond','Georgia','serif'],sans:['DM Sans','system-ui','sans-serif']}}}}
-</script>
-<link rel="stylesheet" href="styles.css?v=1"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css?v=2"/>
 </head>
 <body>
-<div id="progress"></div>
-<div id="cursor-glow"></div>
-<button id="toTop" aria-label="Back to top"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+<div id="pg-bar"></div>
+<button id="toTop" aria-label="Back to top"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
 
 <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4" id="nav" style="background:rgba(4,8,15,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(77,194,232,.18)">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
-    <a href="https://www.casaescondida-anilao.com/" target="_blank" class="flex items-center" style="text-decoration:none">
-      <img src="img/logo-white.webp" alt="Casa Escondida Anilao" style="height:44px;width:auto;object-fit:contain;display:block"/>
-    </a>
-    <div class="flex items-center gap-4 md:gap-8">
-      <a href="index.html" class="nav-page nav-current">Showcase</a>
-      <a href="https://www.casaescondida-anilao.com/gallery.html" target="_blank" class="nav-page">Live Gallery</a>
-    </div>
-    <a href="#next" class="btn btn-gold text-[11px] tracking-[.16em] uppercase px-5 md:px-6 py-2.5 font-semibold rounded-sm">Connect</a>
+<nav id="nav">
+  <a href="https://www.casaescondida-anilao.com/" target="_blank" rel="noopener" class="nav-logo" aria-label="Casa Escondida — Home">
+    <img class="logo-night" src="img/logo-white.webp" alt="Casa Escondida Anilao"/>
+    <img class="logo-day" src="img/logo-color.webp" alt="Casa Escondida Anilao"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Showcase</a></li>
+    <li><a href="research.html">Market Research</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#connect" class="btn-nav-cta">Connect</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero-bg relative min-h-screen flex items-center justify-center">
+<header class="hero">
   <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="img/hero-poster.jpg">
     <source src="img/hero.mp4" type="video/mp4"/>
   </video>
   <div class="hero-overlay"></div>
-  <div class="star-field" id="stars"></div>
-  <div id="hero-inner" class="relative z-10 text-center px-6 max-w-4xl mx-auto pt-28 pb-20">
-    <div class="inline-flex items-center gap-3 border border-[rgba(77,194,232,.4)] bg-[rgba(77,194,232,.08)] backdrop-blur-sm px-6 py-2.5 mb-9">
-      <span class="shimmer"><svg viewBox="0 0 24 24" fill="#4dc2e8" style="width:13px;height:13px"><path d="M12 2C8 7 5 10 5 14a7 7 0 0014 0c0-4-3-7-7-12z"/></svg></span>
-      <span class="text-[11px] tracking-[.25em] uppercase font-medium" style="color:#4dc2e8">Digital Marketing Showcase · 2026</span>
-      <span class="shimmer"><svg viewBox="0 0 24 24" fill="#4dc2e8" style="width:13px;height:13px"><path d="M12 2C8 7 5 10 5 14a7 7 0 0014 0c0-4-3-7-7-12z"/></svg></span>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Digital Marketing Showcase · 2026</div>
+    <h1 class="hero-h1">Casa Escondida <em>Anilao</em></h1>
+    <p class="hero-sub">Imagining a world-class dive destination, beautifully told online.</p>
+    <p class="hero-kicker">Curated by TechNext</p>
+    <div class="hero-ctas">
+      <a href="#capabilities" class="btn btn-primary">Explore What's Possible
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+      <a href="#gallery" class="btn btn-ghost">See the Content</a>
     </div>
-    <p class="text-white/55 text-[11px] tracking-[.3em] uppercase mb-5">A Showcase for</p>
-    <h1 class="michelin-glow text-white text-4xl md:text-6xl font-semibold leading-[1.12] mb-6" style="font-family:'Playfair Display',serif">
-      Casa Escondida<br>
-      <em class="font-normal gold-anim">Anilao</em>
-    </h1>
-    <p class="text-white/80 text-xl md:text-2xl italic font-light mb-4" style="font-family:'Cormorant Garamond',serif">
-      Imagining a world-class dive destination, beautifully told online.
-    </p>
-    <p class="text-white/55 text-[11px] tracking-[.22em] uppercase mb-11">
-      Digital Marketing Showcase &nbsp;·&nbsp; Curated by TechNext
-    </p>
-    <div class="flex flex-row flex-wrap gap-4 justify-center">
-      <a href="#pillars" class="btn btn-gold text-xs tracking-[.15em] uppercase px-9 py-4 font-semibold rounded-sm">
-        Explore What's Possible
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-      <a href="#showcase" class="btn btn-ow text-xs tracking-[.15em] uppercase px-9 py-4 rounded-sm">See the Content</a>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-n">4.5★</div><div class="hstat-l">Guest Rating</div></div>
+      <div class="hstat"><div class="hstat-n">30+</div><div class="hstat-l">Dive Sites</div></div>
+      <div class="hstat"><div class="hstat-n">PADI 5★</div><div class="hstat-l">IDC Resort</div></div>
+      <div class="hstat"><div class="hstat-n">7</div><div class="hstat-l">Services</div></div>
     </div>
   </div>
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40">
-    <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-  </div>
-</section>
+  <a href="#opportunity" class="hero-scroll" aria-label="Scroll down"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+</header>
 
-<!-- KEYWORD MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="mq">
-    <span>Social Media</span><span>Underwater Video</span><span>Macro Photography</span><span>SEO</span><span>Keywording</span><span>GEO</span><span>AEO</span><span>Paid Social Ads</span><span>Analytics</span><span>Google Reviews</span><span>Reels</span><span>TikTok</span><span>Instagram</span><span>YouTube</span>
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner" id="mq">
+    <span class="mq-item">Social Media<span class="mq-dot"></span></span>
+    <span class="mq-item">Underwater Video<span class="mq-dot"></span></span>
+    <span class="mq-item">Macro Photography<span class="mq-dot"></span></span>
+    <span class="mq-item">SEO &amp; Keywording<span class="mq-dot"></span></span>
+    <span class="mq-item">GEO &amp; AEO<span class="mq-dot"></span></span>
+    <span class="mq-item">Paid Social Ads<span class="mq-dot"></span></span>
+    <span class="mq-item">Analytics<span class="mq-dot"></span></span>
+    <span class="mq-item">Google &amp; TripAdvisor<span class="mq-dot"></span></span>
+    <span class="mq-item">Reels &amp; Shorts<span class="mq-dot"></span></span>
   </div>
 </div>
 
 <!-- OPPORTUNITY -->
-<section id="opportunity" class="py-24 px-6" style="background:#f5f0ea">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#1a6b98">The Opportunity</p>
-      <h2 class="text-3xl md:text-4xl font-semibold mb-5" style="font-family:'Playfair Display',serif;color:#071427">A World-Class Dive Site Deserves a World-Class Presence</h2>
-      <div class="gold-bar mx-auto mb-6"></div>
-      <p class="text-lg max-w-3xl mx-auto" style="color:#3a5568;font-family:'Cormorant Garamond',serif;font-size:1.35rem;line-height:1.7">
-        Anilao is the macro- and muck-diving capital of the world, and Casa Escondida is its PADI 5-Star home on Batangas Bay. The next chapter is making sure every diver and traveller searching for that experience finds you first — and remembers you long after they surface.
-      </p>
+<section class="sec" id="opportunity">
+  <div class="inner">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">The Opportunity</div>
+      <h2 class="sec-h2">A world-class dive site deserves a <em>world-class presence</em></h2>
+      <p class="sec-sub">Anilao is the macro- and muck-diving capital of the world, and Casa Escondida is its PADI 5-Star home on Batangas Bay. The next chapter is making sure every diver searching for that experience finds you first — and remembers you long after they surface.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="icard reveal-s d1 p-7 bg-white border border-[rgba(7,20,39,.08)] text-center">
-        <div class="kpi-num mb-2" data-count="4.5" data-suffix="★">0★</div>
-        <p class="text-sm" style="color:#3a5568">Guest rating across TripAdvisor &amp; Google — social proof worth amplifying every single week.</p>
+    <div class="stat-grid">
+      <div class="stat-card rv d1"><div class="stat-n" data-count="4.5" data-suffix="★">0</div><div class="stat-t">Guest rating across TripAdvisor &amp; Google — social proof worth amplifying every single week.</div></div>
+      <div class="stat-card rv d2"><div class="stat-n" data-count="70" data-suffix="%">0</div><div class="stat-t">Of travellers research a dive resort online before they ever enquire. The first impression is digital.</div></div>
+      <div class="stat-card rv d3"><div class="stat-n" data-count="30" data-suffix="+">0</div><div class="stat-t">World-class dive sites minutes from the jetty — an endless well of content, if we tell it well.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="sec sec-alt" id="capabilities">
+  <div class="inner">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">Capabilities</div>
+      <h2 class="sec-h2">Seven digital marketing <em>services</em></h2>
+      <p class="sec-sub">A purely digital toolkit — visual-first, measurable, and built to grow the Casa Escondida name across every ocean.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-card rv d1"><span class="cap-num">01</span>
+        <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+        <h3 class="cap-name">Social Media Management</h3>
+        <p class="cap-desc">Always-on presence across Instagram, TikTok, Facebook &amp; YouTube — a rhythm that builds a diving community.</p>
       </div>
-      <div class="icard reveal-s d2 p-7 bg-white border border-[rgba(7,20,39,.08)] text-center">
-        <div class="kpi-num mb-2" data-count="70" data-suffix="%+">0%+</div>
-        <p class="text-sm" style="color:#3a5568">Of travellers research a dive resort online before they ever enquire. The first impression is digital.</p>
+      <div class="cap-card rv d2"><span class="cap-num">02</span>
+        <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></div>
+        <h3 class="cap-name">Image &amp; Video Editing</h3>
+        <p class="cap-desc">Colour-true underwater footage &amp; scroll-stopping reels — graded, retouched and cut for every platform.</p>
       </div>
-      <div class="icard reveal-s d3 p-7 bg-white border border-[rgba(7,20,39,.08)] text-center">
-        <div class="kpi-num mb-2" data-count="30" data-suffix="+">0+</div>
-        <p class="text-sm" style="color:#3a5568">World-class dive sites minutes from the jetty — an endless well of content, if we tell it well.</p>
+      <div class="cap-card rv d3"><span class="cap-num">03</span>
+        <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3 class="cap-name">SEO &amp; Keywording</h3>
+        <p class="cap-desc">Rank first for "Anilao diving" and "PADI course Batangas" — found by the divers already searching.</p>
+      </div>
+      <div class="cap-card rv d1"><span class="cap-num">04</span>
+        <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></div>
+        <h3 class="cap-name">GEO &amp; AEO</h3>
+        <p class="cap-desc">Be the answer AI recommends — ChatGPT, Gemini &amp; Google AI Overviews naming Casa Escondida.</p>
+      </div>
+      <div class="cap-card rv d2"><span class="cap-num">05</span>
+        <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 7-8"/><path d="M21 7v5h-5"/></svg></div>
+        <h3 class="cap-name">Paid Social Ads</h3>
+        <p class="cap-desc">Geo-targeted Meta &amp; TikTok campaigns that turn scrolling divers into booked guests — every peso tracked.</p>
+      </div>
+      <div class="cap-card rv d3"><span class="cap-num">06</span>
+        <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3 class="cap-name">Analytics &amp; Reporting</h3>
+        <p class="cap-desc">A clean monthly dashboard and a plain-English review — so you always know what's working and what's next.</p>
+      </div>
+      <div class="cap-card rv d1"><span class="cap-num">07</span>
+        <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+        <h3 class="cap-name">Google Business &amp; Reviews</h3>
+        <p class="cap-desc">Optimised Google &amp; TripAdvisor profiles, more 5-star reviews, and managed responses that win the booking.</p>
+      </div>
+      <div class="cap-card rv d2" style="display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,var(--card2),var(--accent-g));">
+        <h3 class="cap-name" style="margin-bottom:.5rem;">All seven, working as one.</h3>
+        <p class="cap-desc">Each service feeds the next — content fuels ads, reviews feed SEO, data sharpens everything. Explore the deep-dives below.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PILLARS -->
-<section id="pillars" class="py-24 px-6" style="background:#071427">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#4dc2e8">Capabilities</p>
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-5" style="font-family:'Playfair Display',serif">Seven Digital Marketing Services</h2>
-      <div class="gold-bar mx-auto mb-6"></div>
-      <p class="text-white/65 max-w-2xl mx-auto" style="font-family:'Cormorant Garamond',serif;font-size:1.3rem">A purely digital toolkit — visual-first, measurable, built to grow the Casa Escondida name across every ocean.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-
-      <div class="pillar-card p-7 reveal d1">
-        <div class="flex items-center justify-between mb-4"><span class="pillar-num">01</span>
-          <svg width="28" height="28" fill="none" stroke="#4dc2e8" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#4dc2e8"/></svg></div>
-        <h3 class="text-lg font-semibold mb-2" style="font-family:'Playfair Display',serif;color:#071427">Social Media Management</h3>
-        <p class="text-sm" style="color:#456075">Always-on presence across Instagram, TikTok, Facebook &amp; YouTube.</p>
-      </div>
-
-      <div class="pillar-card p-7 reveal d2">
-        <div class="flex items-center justify-between mb-4"><span class="pillar-num">02</span>
-          <svg width="28" height="28" fill="none" stroke="#4dc2e8" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3z" fill="#4dc2e8" stroke="none"/></svg></div>
-        <h3 class="text-lg font-semibold mb-2" style="font-family:'Playfair Display',serif;color:#071427">Image &amp; Video Editing</h3>
-        <p class="text-sm" style="color:#456075">Colour-true underwater footage &amp; scroll-stopping reels, expertly edited.</p>
-      </div>
-
-      <div class="pillar-card p-7 reveal d3">
-        <div class="flex items-center justify-between mb-4"><span class="pillar-num">03</span>
-          <svg width="28" height="28" fill="none" stroke="#4dc2e8" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-        <h3 class="text-lg font-semibold mb-2" style="font-family:'Playfair Display',serif;color:#071427">SEO &amp; Keywording</h3>
-        <p class="text-sm" style="color:#456075">Rank #1 for "Anilao diving" and "PADI course Batangas".</p>
-      </div>
-
-      <div class="pillar-card p-7 reveal d4">
-        <div class="flex items-center justify-between mb-4"><span class="pillar-num">04</span>
-          <svg width="28" height="28" fill="none" stroke="#4dc2e8" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><circle cx="18.5" cy="5" r=".9" fill="#4dc2e8"/><circle cx="5.5" cy="18" r=".9" fill="#4dc2e8"/></svg></div>
-        <h3 class="text-lg font-semibold mb-2" style="font-family:'Playfair Display',serif;color:#071427">GEO &amp; AEO</h3>
-        <p class="text-sm" style="color:#456075">Be the answer AI recommends — ChatGPT, Gemini &amp; AI Overviews.</p>
-      </div>
-
-      <div class="pillar-card p-7 reveal d1">
-        <div class="flex items-center justify-between mb-4"><span class="pillar-num">05</span>
-          <svg width="28" height="28" fill="none" stroke="#4dc2e8" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 7-8"/><path d="M21 7v5h-5"/></svg></div>
-        <h3 class="text-lg font-semibold mb-2" style="font-family:'Playfair Display',serif;color:#071427">Paid Social Ads</h3>
-        <p class="text-sm" style="color:#456075">Geo-targeted Meta &amp; TikTok campaigns that fill the dive deck.</p>
-      </div>
-
-      <div class="pillar-card p-7 reveal d2">
-        <div class="flex items-center justify-between mb-4"><span class="pillar-num">06</span>
-          <svg width="28" height="28" fill="none" stroke="#4dc2e8" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-        <h3 class="text-lg font-semibold mb-2" style="font-family:'Playfair Display',serif;color:#071427">Analytics &amp; Reporting</h3>
-        <p class="text-sm" style="color:#456075">Clear monthly dashboards — every peso accounted for.</p>
-      </div>
-
-      <div class="pillar-card p-7 reveal d3">
-        <div class="flex items-center justify-between mb-4"><span class="pillar-num">07</span>
-          <svg width="28" height="28" fill="none" stroke="#4dc2e8" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
-        <h3 class="text-lg font-semibold mb-2" style="font-family:'Playfair Display',serif;color:#071427">Google Business &amp; Reviews</h3>
-        <p class="text-sm" style="color:#456075">Optimised profile, more 5-star reviews, managed responses.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ SERVICE DETAIL SECTIONS ══════════ -->
-
-<!-- 01 SOCIAL MEDIA -->
-<section id="svc-social" class="svc-sec" style="background:#071427">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div class="reveal-l">
-      <p class="svc-eyebrow" style="color:#4dc2e8">01 · Social Media Management</p>
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3 mb-4" style="font-family:'Playfair Display',serif">An Always-On Presence</h2>
-      <div class="gold-bar mb-5"></div>
-      <p class="text-white/70 mb-6">A consistent content rhythm across every platform your divers already live on — building a community that turns followers into bookings.</p>
-      <div class="mb-6">
-        <span class="chip" style="color:#7dd6f0">Instagram</span><span class="chip" style="color:#7dd6f0">TikTok</span><span class="chip" style="color:#7dd6f0">Facebook</span><span class="chip" style="color:#7dd6f0">YouTube</span>
-      </div>
-      <div class="big-stat" data-count="180" data-suffix="%">0%</div>
-      <p class="text-white/55 text-sm">Projected audience growth in 6 months</p>
-    </div>
-    <div class="reveal-r panel panel-d">
-      <p class="text-white/80 text-sm font-semibold mb-5" style="letter-spacing:.04em">Projected Follower Growth</p>
-      <div class="bars">
-        <div class="bar"><i style="--h:30%"></i><b class="text-white">M1</b></div>
-        <div class="bar"><i style="--h:44%"></i><b class="text-white">M2</b></div>
-        <div class="bar"><i style="--h:58%"></i><b class="text-white">M3</b></div>
-        <div class="bar"><i style="--h:71%"></i><b class="text-white">M4</b></div>
-        <div class="bar"><i style="--h:85%"></i><b class="text-white">M5</b></div>
-        <div class="bar"><i style="--h:100%"></i><b class="text-white">M6</b></div>
-      </div>
-      <p class="chart-note text-white">Illustrative projection</p>
-    </div>
-  </div>
-</section>
-
-<!-- 02 IMAGE & VIDEO EDITING -->
-<section id="svc-editing" class="svc-sec" style="background:#f5f0ea">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div class="reveal-l order-2 lg:order-1 ba" id="ba1">
-      <img class="before" src="img/showcase/ba.jpg" alt="Raw underwater footage"/>
-      <img class="after" src="img/showcase/ba.jpg" alt="Colour-graded result"/>
-      <div class="handle"><span class="ico">⇆</span></div>
-      <span class="tag l">After</span><span class="tag r">Before</span>
-    </div>
-    <div class="reveal-r order-1 lg:order-2">
-      <p class="svc-eyebrow" style="color:#1a6b98">02 · Image &amp; Video Editing</p>
-      <h2 class="text-3xl md:text-4xl font-semibold mt-3 mb-4" style="font-family:'Playfair Display',serif;color:#071427">True Colour, Restored</h2>
-      <div class="gold-bar mb-5"></div>
-      <p class="mb-4" style="color:#456075">Underwater, water swallows the reds first — raw footage comes back flat and blue. We colour-correct, grade and cut it into cinematic, crave-worthy content for every platform. <strong>Drag the slider</strong> to see the difference editing makes.</p>
-      <div class="mb-2">
-        <span class="chip" style="color:#1a6b98">Colour Correction</span><span class="chip" style="color:#1a6b98">Retouching</span><span class="chip" style="color:#1a6b98">Reels &amp; Shorts</span><span class="chip" style="color:#1a6b98">Motion Graphics</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 03 SEO & KEYWORDING -->
-<section id="svc-seo" class="svc-sec" style="background:#071427">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div class="reveal-l">
-      <p class="svc-eyebrow" style="color:#4dc2e8">03 · SEO &amp; Keywording</p>
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3 mb-4" style="font-family:'Playfair Display',serif">Found First, Every Search</h2>
-      <div class="gold-bar mb-5"></div>
-      <p class="text-white/70 mb-6">We target the exact searches divers type when planning a trip — then climb the rankings until Casa Escondida is the first name they see.</p>
-      <div class="big-stat" data-count="12" data-suffix="">0</div>
-      <p class="text-white/55 text-sm">Priority keywords targeted for page one</p>
-    </div>
-    <div class="reveal-r panel panel-d">
-      <p class="text-white/80 text-sm font-semibold mb-5">Target Keyword Visibility</p>
-      <div class="hbars">
-        <div><div class="hb-top text-white/85"><span>anilao diving</span><span style="color:#7dd6f0">#1</span></div><div class="hb-track"><div class="hb-fill" style="--w:95%"></div></div></div>
-        <div><div class="hb-top text-white/85"><span>padi course batangas</span><span style="color:#7dd6f0">#2</span></div><div class="hb-track"><div class="hb-fill" style="--w:84%"></div></div></div>
-        <div><div class="hb-top text-white/85"><span>macro diving philippines</span><span style="color:#7dd6f0">#3</span></div><div class="hb-track"><div class="hb-fill" style="--w:76%"></div></div></div>
-        <div><div class="hb-top text-white/85"><span>dive resort anilao</span><span style="color:#7dd6f0">top 5</span></div><div class="hb-track"><div class="hb-fill" style="--w:60%"></div></div></div>
-      </div>
-      <p class="chart-note text-white">Illustrative target rankings</p>
-    </div>
-  </div>
-</section>
-
-<!-- 04 GEO & AEO -->
-<section id="svc-geo" class="svc-sec" style="background:#f5f0ea">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div class="reveal-l order-2 lg:order-1 panel panel-l">
-      <p class="text-sm font-semibold mb-5" style="color:#071427">Share of AI Recommendations</p>
-      <div class="flex items-center gap-7">
-        <svg viewBox="0 0 120 120" width="150" height="150" style="flex-shrink:0">
-          <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(7,20,39,.1)" stroke-width="13"/>
-          <circle class="donut-arc" cx="60" cy="60" r="52" fill="none" stroke="#4dc2e8" stroke-width="13" stroke-linecap="round" transform="rotate(-90 60 60)" style="--dash:105"/>
-        </svg>
-        <div>
-          <div class="big-stat" data-count="68" data-suffix="%">0%</div>
-          <p class="text-sm mt-1" style="color:#456075">of relevant AI answers<br>recommend Casa Escondida</p>
+<!-- DEEP DIVE 1: SOCIAL -->
+<section class="sec" id="dive-social">
+  <div class="inner">
+    <div class="ov-grid">
+      <div class="ov-text rvl">
+        <div class="ov-eyebrow">01 · Social Media Management</div>
+        <h3>An <em>always-on</em> presence</h3>
+        <p>A consistent content rhythm across every platform your divers already live on — building a community that turns followers into bookings, season after season.</p>
+        <div class="ov-badges">
+          <span class="ov-badge">Instagram</span><span class="ov-badge">TikTok</span><span class="ov-badge">Facebook</span><span class="ov-badge">YouTube</span>
         </div>
+        <div class="ov-stat"><div class="n" data-count="180" data-suffix="%">0</div><div class="l">Projected audience growth in 6 months</div></div>
       </div>
-      <p class="chart-note" style="color:#071427">Illustrative share of voice</p>
-    </div>
-    <div class="reveal-r order-1 lg:order-2">
-      <p class="svc-eyebrow" style="color:#1a6b98">04 · GEO &amp; AEO</p>
-      <h2 class="text-3xl md:text-4xl font-semibold mt-3 mb-4" style="font-family:'Playfair Display',serif;color:#071427">Be the Answer AI Gives</h2>
-      <div class="gold-bar mb-5"></div>
-      <p style="color:#456075">When divers ask ChatGPT, Gemini or Google's AI "where should I dive in the Philippines?", we make sure the answer is you.</p>
-      <div class="mt-6 space-y-3">
-        <div class="ai-card d1" style="background:#fff;color:#071427"><strong>ChatGPT</strong> — "For world-class macro diving, <span style="color:#1a6b98">Casa Escondida in Anilao</span> is a top pick."</div>
-        <div class="ai-card d2" style="background:#fff;color:#071427"><strong>Gemini</strong> — "A leading PADI 5-Star resort in Anilao is <span style="color:#1a6b98">Casa Escondida Anilao</span>."</div>
-        <div class="ai-card d3" style="background:#fff;color:#071427"><strong>AI Overviews</strong> — "Recommended: <span style="color:#1a6b98">Casa Escondida</span>, a PADI 5-Star dive resort."</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 PAID SOCIAL ADS -->
-<section id="svc-ads" class="svc-sec" style="background:#071427">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div class="reveal-l">
-      <p class="svc-eyebrow" style="color:#4dc2e8">05 · Paid Social Ads</p>
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3 mb-4" style="font-family:'Playfair Display',serif">Spend That Fills the Dive Deck</h2>
-      <div class="gold-bar mb-5"></div>
-      <p class="text-white/70 mb-6">Geo-targeted Meta &amp; TikTok campaigns that turn scrolling divers into booked guests — every peso tracked to a result.</p>
-      <div class="big-stat" data-count="5" data-suffix="×">0×</div>
-      <p class="text-white/55 text-sm">Target return on ad spend (ROAS)</p>
-    </div>
-    <div class="reveal-r panel panel-d">
-      <p class="text-white/80 text-sm font-semibold mb-5">Campaign Conversion Funnel</p>
-      <div class="funnel">
-        <div class="fn-row" style="--w:100%">Impressions <span>1.0M</span></div>
-        <div class="fn-row" style="--w:72%">Engagements <span>320K</span></div>
-        <div class="fn-row" style="--w:44%">Link Clicks <span>48K</span></div>
-        <div class="fn-row" style="--w:20%">Bookings <span>2.4K</span></div>
-      </div>
-      <p class="chart-note text-white">Illustrative funnel</p>
-    </div>
-  </div>
-</section>
-
-<!-- 06 ANALYTICS & REPORTING -->
-<section id="svc-analytics" class="svc-sec" style="background:#f5f0ea">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div class="reveal-l order-2 lg:order-1 panel panel-l">
-      <p class="text-sm font-semibold mb-4" style="color:#071427">Performance Trend</p>
-      <svg viewBox="0 0 320 160" width="100%" height="150" preserveAspectRatio="none">
-        <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(77,194,232,.35)"/><stop offset="1" stop-color="rgba(77,194,232,0)"/></linearGradient></defs>
-        <path class="line-area" d="M10,132 L60,120 L110,96 L160,84 L210,58 L270,40 L310,26 L310,160 L10,160 Z" fill="url(#ag)"/>
-        <polyline class="line-path" points="10,132 60,120 110,96 160,84 210,58 270,40 310,26" fill="none" stroke="#4dc2e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <g fill="#2e9fc4"><circle class="line-dot" cx="60" cy="120" r="3.5"/><circle class="line-dot" cx="160" cy="84" r="3.5"/><circle class="line-dot" cx="270" cy="40" r="3.5"/><circle class="line-dot" cx="310" cy="26" r="4"/></g>
-      </svg>
-      <div class="grid grid-cols-3 gap-4 mt-6 text-center">
-        <div><div class="big-stat" style="font-size:1.8rem" data-count="240" data-suffix="K">0</div><p class="text-xs" style="color:#456075">Monthly Reach</p></div>
-        <div><div class="big-stat" style="font-size:1.8rem" data-count="18" data-suffix="K">0</div><p class="text-xs" style="color:#456075">Engagements</p></div>
-        <div><div class="big-stat" style="font-size:1.8rem" data-count="2400" data-suffix="">0</div><p class="text-xs" style="color:#456075">Bookings</p></div>
-      </div>
-      <p class="chart-note" style="color:#071427">Illustrative dashboard</p>
-    </div>
-    <div class="reveal-r order-1 lg:order-2">
-      <p class="svc-eyebrow" style="color:#1a6b98">06 · Analytics &amp; Reporting</p>
-      <h2 class="text-3xl md:text-4xl font-semibold mt-3 mb-4" style="font-family:'Playfair Display',serif;color:#071427">Clarity, Every Month</h2>
-      <div class="gold-bar mb-5"></div>
-      <p style="color:#456075">A clean dashboard and a plain-English monthly review — so you always know what's working, what's next, and where every peso went.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 07 GOOGLE BUSINESS & REVIEWS -->
-<section id="svc-reviews" class="svc-sec" style="background:#071427">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div class="reveal-l">
-      <p class="svc-eyebrow" style="color:#4dc2e8">07 · Google Business &amp; Reviews</p>
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3 mb-4" style="font-family:'Playfair Display',serif">Trust at First Glance</h2>
-      <div class="gold-bar mb-5"></div>
-      <p class="text-white/70 mb-6">An optimised Google &amp; TripAdvisor profile and a steady stream of glowing reviews — the trust signals that win the click and the booking.</p>
-      <div class="stars-wrap">
-        <span class="stars-bg">★★★★★</span>
-        <span class="stars-fg" style="--w:90%">★★★★★</span>
-      </div>
-      <div class="big-stat mt-3" data-count="320" data-suffix="+">0</div>
-      <p class="text-white/55 text-sm">Reviews generated &amp; managed</p>
-    </div>
-    <div class="reveal-r panel panel-d">
-      <p class="text-white/80 text-sm font-semibold mb-5">Rating Distribution</p>
-      <div class="hbars">
-        <div><div class="hb-top text-white/85"><span>5 ★</span><span style="color:#7dd6f0">82%</span></div><div class="hb-track"><div class="hb-fill" style="--w:82%"></div></div></div>
-        <div><div class="hb-top text-white/85"><span>4 ★</span><span style="color:#7dd6f0">13%</span></div><div class="hb-track"><div class="hb-fill" style="--w:13%"></div></div></div>
-        <div><div class="hb-top text-white/85"><span>3 ★</span><span style="color:#7dd6f0">3%</span></div><div class="hb-track"><div class="hb-fill" style="--w:3%"></div></div></div>
-        <div><div class="hb-top text-white/85"><span>2 ★</span><span style="color:#7dd6f0">1%</span></div><div class="hb-track"><div class="hb-fill" style="--w:1%"></div></div></div>
-        <div><div class="hb-top text-white/85"><span>1 ★</span><span style="color:#7dd6f0">1%</span></div><div class="hb-track"><div class="hb-fill" style="--w:1%"></div></div></div>
-      </div>
-      <p class="chart-note text-white">Illustrative distribution</p>
-    </div>
-  </div>
-</section>
-
-<!-- SHOWCASE -->
-<section id="showcase" class="py-24 px-6" style="background:#071427">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#4dc2e8">The Showcase</p>
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-5" style="font-family:'Playfair Display',serif">A Glimpse of the Content</h2>
-      <div class="gold-bar mx-auto mb-5"></div>
-      <p class="text-white/55 text-sm italic">A taste of the content we create — from signature Anilao macro photography to unforgettable reef encounters.</p>
-    </div>
-
-    <!-- Underwater Photography -->
-    <div class="mb-16">
-      <p class="text-white/80 text-sm tracking-[.18em] uppercase mb-6 flex items-center gap-3" style="font-family:'DM Sans',sans-serif">
-        <span class="gold-bar"></span> Underwater Photography
-      </p>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-        <div class="vid-card reveal-s d1"><span class="vbadge">Macro</span><img src="img/showcase/uw-1.jpg" alt="Flamboyant Cuttlefish" loading="lazy"/><span class="vlabel">Flamboyant Cuttlefish</span></div>
-        <div class="vid-card reveal-s d2"><span class="vbadge">Macro</span><img src="img/showcase/uw-2.webp" alt="Pygmy Seahorse" loading="lazy"/><span class="vlabel">Pygmy Seahorse</span></div>
-        <div class="vid-card reveal-s d3"><span class="vbadge">Macro</span><img src="img/showcase/uw-3.webp" alt="Leopard Nudibranch" loading="lazy"/><span class="vlabel">Leopard Nudibranch</span></div>
-        <div class="vid-card reveal-s d4"><span class="vbadge">Macro</span><img src="img/showcase/uw-4.jpg" alt="Hairy Octopus" loading="lazy"/><span class="vlabel">Hairy Octopus</span></div>
-        <div class="vid-card reveal-s d1"><span class="vbadge">Macro</span><img src="img/showcase/uw-5.jpg" alt="Harlequin Shrimp" loading="lazy"/><span class="vlabel">Harlequin Shrimp</span></div>
-        <div class="vid-card reveal-s d2"><span class="vbadge">Macro</span><img src="img/showcase/uw-6.webp" alt="Peacock Mantis Shrimp" loading="lazy"/><span class="vlabel">Peacock Mantis Shrimp</span></div>
-        <div class="vid-card reveal-s d3"><span class="vbadge">Macro</span><img src="img/showcase/uw-7.webp" alt="Blue Ribbon Eel" loading="lazy"/><span class="vlabel">Blue Ribbon Eel</span></div>
-        <div class="vid-card reveal-s d4"><span class="vbadge">Macro</span><img src="img/showcase/uw-8.webp" alt="Mimic Octopus" loading="lazy"/><span class="vlabel">Mimic Octopus</span></div>
-        <div class="vid-card reveal-s d1"><span class="vbadge">Macro</span><img src="img/showcase/uw-9.webp" alt="Pikachu Nudibranch" loading="lazy"/><span class="vlabel">Pikachu Nudibranch</span></div>
-        <div class="vid-card reveal-s d2"><span class="vbadge">Macro</span><img src="img/showcase/uw-10.webp" alt="Candy Crab" loading="lazy"/><span class="vlabel">Candy Crab</span></div>
-      </div>
-    </div>
-
-    <!-- Reef & Encounters -->
-    <div class="mb-4">
-      <p class="text-white/80 text-sm tracking-[.18em] uppercase mb-6 flex items-center gap-3" style="font-family:'DM Sans',sans-serif">
-        <span class="gold-bar"></span> Reef &amp; Encounters
-      </p>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
-        <div class="vid-card reveal-s d1"><span class="vbadge">Reef</span><img src="img/showcase/rf-1.webp" alt="Green Sea Turtle" loading="lazy"/><span class="vlabel">Green Sea Turtle</span></div>
-        <div class="vid-card reveal-s d2"><span class="vbadge">Reef</span><img src="img/showcase/rf-2.jpg" alt="Anemonefish" loading="lazy"/><span class="vlabel">Anemonefish</span></div>
-        <div class="vid-card reveal-s d3"><span class="vbadge">Reef</span><img src="img/showcase/rf-3.webp" alt="Sea Fan Coral" loading="lazy"/><span class="vlabel">Sea Fan Coral</span></div>
-        <div class="vid-card reveal-s d1"><span class="vbadge">Reef</span><img src="img/showcase/rf-4.webp" alt="Hawksbill Turtle" loading="lazy"/><span class="vlabel">Hawksbill Turtle</span></div>
-        <div class="vid-card reveal-s d2"><span class="vbadge">Reef</span><img src="img/showcase/rf-5.webp" alt="Ornate Ghost Pipefish" loading="lazy"/><span class="vlabel">Ghost Pipefish</span></div>
-        <div class="vid-card reveal-s d3"><span class="vbadge">Reef</span><img src="img/showcase/rf-6.webp" alt="Willan's Nudibranch" loading="lazy"/><span class="vlabel">Willan's Nudibranch</span></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ROADMAP -->
-<section id="roadmap" class="py-24 px-6" style="background:#f5f0ea">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#1a6b98">The Plan</p>
-      <h2 class="text-3xl md:text-4xl font-semibold mb-5" style="font-family:'Playfair Display',serif;color:#071427">Your First 90 Days</h2>
-      <div class="gold-bar mx-auto"></div>
-    </div>
-    <div class="space-y-5">
-      <div class="phase-card p-7 reveal d1">
-        <div class="flex items-start gap-5">
-          <span class="text-[11px] font-semibold tracking-[.16em] uppercase px-3 py-1.5 rounded-sm flex-shrink-0" style="background:rgba(77,194,232,.15);color:#1a6b98">Days 1–30</span>
-          <div><h3 class="font-semibold text-lg mb-1" style="font-family:'Playfair Display',serif;color:#071427">Foundation</h3>
-          <p class="text-sm" style="color:#456075">Brand &amp; channel audit, profile optimisation, Google Business &amp; TripAdvisor setup, first edited underwater content batch, content calendar and tracking in place.</p></div>
-        </div>
-      </div>
-      <div class="phase-card p-7 reveal d2">
-        <div class="flex items-start gap-5">
-          <span class="text-[11px] font-semibold tracking-[.16em] uppercase px-3 py-1.5 rounded-sm flex-shrink-0" style="background:rgba(77,194,232,.15);color:#1a6b98">Days 31–60</span>
-          <div><h3 class="font-semibold text-lg mb-1" style="font-family:'Playfair Display',serif;color:#071427">Momentum</h3>
-          <p class="text-sm" style="color:#456075">Consistent posting &amp; editing, paid ads live, review engine running, SEO &amp; AEO gaining traction.</p></div>
-        </div>
-      </div>
-      <div class="phase-card p-7 reveal d3">
-        <div class="flex items-start gap-5">
-          <span class="text-[11px] font-semibold tracking-[.16em] uppercase px-3 py-1.5 rounded-sm flex-shrink-0" style="background:rgba(77,194,232,.15);color:#1a6b98">Days 61–90</span>
-          <div><h3 class="font-semibold text-lg mb-1" style="font-family:'Playfair Display',serif;color:#071427">Optimise &amp; Scale</h3>
-          <p class="text-sm" style="color:#456075">Double down on what converts, refine ad spend, scale top-performing creative, and present the first full performance review.</p></div>
+      <div class="ov-media rvr">
+        <div class="panel">
+          <div class="panel-title">Projected Follower Growth</div>
+          <div class="bars">
+            <div class="bar"><i style="--h:30%"></i><b>M1</b></div>
+            <div class="bar"><i style="--h:44%"></i><b>M2</b></div>
+            <div class="bar"><i style="--h:58%"></i><b>M3</b></div>
+            <div class="bar"><i style="--h:71%"></i><b>M4</b></div>
+            <div class="bar"><i style="--h:85%"></i><b>M5</b></div>
+            <div class="bar"><i style="--h:100%"></i><b>M6</b></div>
+          </div>
+          <div class="panel-note">Illustrative projection</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EXPECTED OUTCOMES -->
-<section class="py-24 px-6" style="background:#071427">
-  <div class="max-w-5xl mx-auto text-center">
-    <div class="reveal mb-14">
-      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#4dc2e8">What Success Looks Like</p>
-      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-5" style="font-family:'Playfair Display',serif">Targets We'll Hold Ourselves To</h2>
-      <div class="gold-bar mx-auto"></div>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-      <div class="icard reveal-s d1 p-6 rounded-xl text-center" style="background:rgba(255,255,255,.04);border:1px solid rgba(77,194,232,.16)"><div class="kpi-num mb-2">↑ Reach</div><p class="text-white/60 text-sm">Grow social following &amp; impressions month over month</p></div>
-      <div class="icard reveal-s d2 p-6 rounded-xl text-center" style="background:rgba(255,255,255,.04);border:1px solid rgba(77,194,232,.16)"><div class="kpi-num mb-2">↑ Bookings</div><p class="text-white/60 text-sm">Drive measurable dive &amp; room bookings from digital channels</p></div>
-      <div class="icard reveal-s d3 p-6 rounded-xl text-center" style="background:rgba(255,255,255,.04);border:1px solid rgba(77,194,232,.16)"><div class="kpi-num mb-2">★ Rating</div><p class="text-white/60 text-sm">Lift Google &amp; TripAdvisor scores via reputation flow</p></div>
-      <div class="icard reveal-s d4 p-6 rounded-xl text-center" style="background:rgba(255,255,255,.04);border:1px solid rgba(77,194,232,.16)"><div class="kpi-num mb-2">↑ ROI</div><p class="text-white/60 text-sm">Positive return on every ad peso, reported monthly</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- NEXT STEPS / CTA -->
-<section id="next" class="py-28 px-6 relative" style="background:linear-gradient(160deg,#0c2038,#04080f)">
-  <div class="absolute inset-0 dot-bg opacity-30"></div>
-  <div class="max-w-3xl mx-auto text-center relative z-10 reveal">
-    <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-5" style="color:#4dc2e8">Let's Talk</p>
-    <h2 class="text-3xl md:text-5xl font-semibold text-white mb-6 michelin-glow" style="font-family:'Playfair Display',serif">Let's Tell Your Story Together</h2>
-    <p class="text-white/75 text-lg mb-10 italic" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem">
-      This showcase is just a starting point — we'd love to explore the possibilities over a sunset on Batangas Bay.
-    </p>
-    <div class="flex flex-row flex-wrap gap-4 justify-center mb-12">
-      <a href="mailto:hello@technext.asia?subject=Casa%20Escondida%20Anilao%20Digital%20Marketing%20Showcase" class="btn btn-gold text-xs tracking-[.15em] uppercase px-9 py-4 font-semibold rounded-sm">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-        Start a Conversation
-      </a>
-      <a href="https://www.casaescondida-anilao.com/" target="_blank" class="btn btn-ow text-xs tracking-[.15em] uppercase px-9 py-4 rounded-sm">Visit the Website</a>
-    </div>
-    <div class="border-t border-[rgba(77,194,232,.2)] pt-8">
-      <p class="text-white/40 text-[11px] tracking-[.22em] uppercase">Showcase curated by TechNext &nbsp;·&nbsp; hello@technext.asia &nbsp;·&nbsp; technext.asia</p>
+<!-- DEEP DIVE 2: EDITING (before/after) -->
+<section class="sec sec-alt" id="dive-editing">
+  <div class="inner">
+    <div class="ov-grid flip">
+      <div class="ov-media rvl">
+        <div class="ba" id="ba1">
+          <img class="before" src="img/showcase/ba.jpg" alt="Raw underwater footage"/>
+          <img class="after" src="img/showcase/ba.jpg" alt="Colour-graded result"/>
+          <div class="handle"><span class="ico">⇆</span></div>
+          <span class="tag l">After</span><span class="tag r">Before</span>
+        </div>
+      </div>
+      <div class="ov-text rvr">
+        <div class="ov-eyebrow">02 · Image &amp; Video Editing</div>
+        <h3>True colour, <em>restored</em></h3>
+        <p>Underwater, water swallows the reds first — raw footage comes back flat and blue. We colour-correct, grade and cut it into cinematic, crave-worthy content for every platform.</p>
+        <p style="color:var(--accent);font-weight:500;">Drag the slider to see the difference editing makes.</p>
+        <div class="ov-badges">
+          <span class="ov-badge">Colour Correction</span><span class="ov-badge">Retouching</span><span class="ov-badge">Reels &amp; Shorts</span><span class="ov-badge">Motion Graphics</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<footer class="py-8 px-6 text-center" style="background:#04080f">
-  <p class="text-white/35 text-xs">© 2026 · Digital Marketing Showcase for Casa Escondida Anilao · Curated by TechNext</p>
+<!-- DEEP DIVE 3: FOUND FIRST (SEO + AEO) -->
+<section class="sec" id="dive-found">
+  <div class="inner">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">03 &amp; 04 · SEO · GEO · AEO</div>
+      <h2 class="sec-h2">Found first, <em>every search</em> — human or AI</h2>
+      <p class="sec-sub">We target the exact searches divers type when planning a trip, then make sure the answer is you — whether it comes from Google's blue links or an AI assistant.</p>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-media rvl">
+        <div class="panel">
+          <div class="panel-title">Target Keyword Visibility</div>
+          <div class="krow"><div class="ktop"><span>anilao diving</span><span class="rk">#1</span></div><div class="ktrack"><div class="kfill" style="--w:95%"></div></div></div>
+          <div class="krow"><div class="ktop"><span>padi course batangas</span><span class="rk">#2</span></div><div class="ktrack"><div class="kfill" style="--w:84%"></div></div></div>
+          <div class="krow"><div class="ktop"><span>macro diving philippines</span><span class="rk">#3</span></div><div class="ktrack"><div class="kfill" style="--w:76%"></div></div></div>
+          <div class="krow"><div class="ktop"><span>dive resort anilao</span><span class="rk">Top 5</span></div><div class="ktrack"><div class="kfill" style="--w:60%"></div></div></div>
+          <div class="panel-note">Illustrative target rankings</div>
+        </div>
+      </div>
+      <div class="ov-text rvr">
+        <div class="ov-eyebrow">Be the answer AI gives</div>
+        <h3>When a diver asks, <em>"where should I dive in the Philippines?"</em></h3>
+        <p>More travellers plan through ChatGPT, Gemini and Google's AI Overviews every month. We structure your content so the machines recommend you by name.</p>
+        <div class="ai-card"><strong>ChatGPT</strong> — "For world-class macro diving, <span class="hl">Casa Escondida in Anilao</span> is a top pick."</div>
+        <div class="ai-card"><strong>Gemini</strong> — "A leading PADI 5-Star resort in Anilao is <span class="hl">Casa Escondida Anilao</span>."</div>
+        <div class="ai-card"><strong>AI Overviews</strong> — "Recommended: <span class="hl">Casa Escondida</span>, a PADI 5-Star dive resort."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEEP DIVE 4: ADS + REPORTING + REVIEWS -->
+<section class="sec sec-alt" id="dive-perform">
+  <div class="inner">
+    <div class="ov-grid">
+      <div class="ov-text rvl">
+        <div class="ov-eyebrow">05 · 06 · 07 · Ads, Analytics &amp; Reviews</div>
+        <h3>Spend that <em>fills the dive deck</em> — and proof it worked</h3>
+        <p>Geo-targeted Meta &amp; TikTok campaigns turn scrolling divers into booked guests. Every peso is tracked to a result, reported monthly in plain English, and backed by a steady flow of glowing reviews.</p>
+        <div class="ov-badges">
+          <span class="ov-badge">5× Target ROAS</span><span class="ov-badge">Monthly Dashboard</span><span class="ov-badge">Review Engine</span>
+        </div>
+        <div class="ov-stat"><div class="n" data-count="320" data-suffix="+">0</div><div class="l">Reviews generated &amp; managed across Google &amp; TripAdvisor</div></div>
+      </div>
+      <div class="ov-media rvr">
+        <div class="panel">
+          <div class="panel-title">Campaign Conversion Funnel</div>
+          <div class="funnel">
+            <div class="fn" style="--w:100%">Impressions <span>1.0M</span></div>
+            <div class="fn" style="--w:72%">Engagements <span>320K</span></div>
+            <div class="fn" style="--w:44%">Link Clicks <span>48K</span></div>
+            <div class="fn" style="--w:20%">Bookings <span>2.4K</span></div>
+          </div>
+          <div class="panel-note">Illustrative funnel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT GALLERY (eco-style) -->
+<section class="sec" id="gallery">
+  <div class="inner">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">The Content</div>
+      <h2 class="sec-h2">A glimpse of the <em>stories we'd tell</em></h2>
+      <p class="sec-sub">A taste of the content we create — from signature Anilao macro photography to unforgettable reef encounters. Filter to explore.</p>
+    </div>
+    <div class="eco-filters rv" id="ecoFilters">
+      <button class="eco-filter active" data-cat="all">All</button>
+      <button class="eco-filter" data-cat="macro">Macro</button>
+      <button class="eco-filter" data-cat="reef">Reef &amp; Encounters</button>
+    </div>
+    <div class="eco-grid" id="ecoGrid">
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-1.jpg" alt="Flamboyant Cuttlefish" loading="lazy"/><div class="eco-label"><div class="eco-name">Flamboyant Cuttlefish</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-2.webp" alt="Pygmy Seahorse" loading="lazy"/><div class="eco-label"><div class="eco-name">Pygmy Seahorse</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-3.webp" alt="Leopard Nudibranch" loading="lazy"/><div class="eco-label"><div class="eco-name">Leopard Nudibranch</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-4.jpg" alt="Hairy Octopus" loading="lazy"/><div class="eco-label"><div class="eco-name">Hairy Octopus</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-5.jpg" alt="Harlequin Shrimp" loading="lazy"/><div class="eco-label"><div class="eco-name">Harlequin Shrimp</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-6.webp" alt="Peacock Mantis Shrimp" loading="lazy"/><div class="eco-label"><div class="eco-name">Peacock Mantis Shrimp</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-7.webp" alt="Blue Ribbon Eel" loading="lazy"/><div class="eco-label"><div class="eco-name">Blue Ribbon Eel</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-8.webp" alt="Mimic Octopus" loading="lazy"/><div class="eco-label"><div class="eco-name">Mimic Octopus</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-9.webp" alt="Pikachu Nudibranch" loading="lazy"/><div class="eco-label"><div class="eco-name">Pikachu Nudibranch</div></div></div>
+      <div class="eco-card rv" data-cat="macro"><span class="eco-cat">Macro</span><img src="img/showcase/uw-10.webp" alt="Candy Crab" loading="lazy"/><div class="eco-label"><div class="eco-name">Candy Crab</div></div></div>
+      <div class="eco-card rv" data-cat="reef"><span class="eco-cat">Reef</span><img src="img/showcase/rf-1.webp" alt="Green Sea Turtle" loading="lazy"/><div class="eco-label"><div class="eco-name">Green Sea Turtle</div></div></div>
+      <div class="eco-card rv" data-cat="reef"><span class="eco-cat">Reef</span><img src="img/showcase/rf-2.jpg" alt="Anemonefish" loading="lazy"/><div class="eco-label"><div class="eco-name">Anemonefish</div></div></div>
+      <div class="eco-card rv" data-cat="reef"><span class="eco-cat">Reef</span><img src="img/showcase/rf-3.webp" alt="Sea Fan Coral" loading="lazy"/><div class="eco-label"><div class="eco-name">Sea Fan Coral</div></div></div>
+      <div class="eco-card rv" data-cat="reef"><span class="eco-cat">Reef</span><img src="img/showcase/rf-4.webp" alt="Hawksbill Turtle" loading="lazy"/><div class="eco-label"><div class="eco-name">Hawksbill Turtle</div></div></div>
+      <div class="eco-card rv" data-cat="reef"><span class="eco-cat">Reef</span><img src="img/showcase/rf-5.webp" alt="Ornate Ghost Pipefish" loading="lazy"/><div class="eco-label"><div class="eco-name">Ghost Pipefish</div></div></div>
+      <div class="eco-card rv" data-cat="reef"><span class="eco-cat">Reef</span><img src="img/showcase/rf-6.webp" alt="Willan's Nudibranch" loading="lazy"/><div class="eco-label"><div class="eco-name">Willan's Nudibranch</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section class="sec sec-alt" id="plan">
+  <div class="inner">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">The Plan</div>
+      <h2 class="sec-h2">Your first <em>90 days</em></h2>
+      <p class="sec-sub">A calm, structured start — foundations first, then momentum, then scale.</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card rv d1"><span class="plan-days">Days 1–30</span><h3>Foundation</h3><p>Brand &amp; channel audit, profile optimisation, Google Business &amp; TripAdvisor setup, first edited underwater content batch, content calendar and tracking in place.</p></div>
+      <div class="plan-card rv d2"><span class="plan-days">Days 31–60</span><h3>Momentum</h3><p>Consistent posting &amp; editing, paid ads live, the review engine running, and SEO &amp; AEO gaining real traction.</p></div>
+      <div class="plan-card rv d3"><span class="plan-days">Days 61–90</span><h3>Optimise &amp; Scale</h3><p>Double down on what converts, refine ad spend, scale top-performing creative, and present the first full performance review.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="sec" id="outcomes">
+  <div class="inner">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">What Success Looks Like</div>
+      <h2 class="sec-h2">Targets we'll <em>hold ourselves to</em></h2>
+    </div>
+    <div class="cap-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="stat-card rv d1"><div class="stat-n" style="font-size:1.6rem;">↑ Reach</div><div class="stat-t">Grow social following &amp; impressions month over month.</div></div>
+      <div class="stat-card rv d2"><div class="stat-n" style="font-size:1.6rem;">↑ Bookings</div><div class="stat-t">Drive measurable dive &amp; room bookings from digital channels.</div></div>
+      <div class="stat-card rv d3"><div class="stat-n" style="font-size:1.6rem;">★ Rating</div><div class="stat-t">Lift Google &amp; TripAdvisor scores via a steady reputation flow.</div></div>
+      <div class="stat-card rv d4"><div class="stat-n" style="font-size:1.6rem;">↑ ROI</div><div class="stat-t">Positive return on every ad peso, reported monthly.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="connect">
+  <div class="cta-bg"><img src="img/hero-poster.jpg" alt=""/></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <div class="sec-eyebrow">Let's Talk</div>
+    <h2>Let's tell your story <em>together</em></h2>
+    <p>This showcase is just a starting point — we'd love to explore the possibilities over a sunset on Batangas Bay.</p>
+    <div class="cta-btns">
+      <a href="mailto:hello@technext.asia?subject=Casa%20Escondida%20Anilao%20Digital%20Marketing%20Showcase" class="btn btn-primary">
+        <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        Start a Conversation</a>
+      <a href="https://www.casaescondida-anilao.com/" target="_blank" rel="noopener" class="btn btn-ghost">Visit the Website</a>
+    </div>
+    <div class="cta-fine">Showcase curated by TechNext · hello@technext.asia · technext.asia</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="c">
+    <div class="foot-grid">
+      <div>
+        <a href="https://www.casaescondida-anilao.com/" target="_blank" rel="noopener" class="foot-logo">Casa <span>Escondida</span></a>
+        <p class="foot-desc">A hidden paradise in Anilao, Batangas — where world-class Philippine diving meets exceptional hospitality on the shores of Batangas Bay.</p>
+        <div class="foot-socials">
+          <a href="https://web.facebook.com/CasaEscondidaAnilao/" target="_blank" rel="noopener" class="soc" aria-label="Facebook"><svg class="fill-icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/casaescondidaanilao/" target="_blank" rel="noopener" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.tripadvisor.com.ph/Hotel_Review-g1587920-d10086753-Reviews-Casa_Escondida_Anilao_Resort_Dive_Center-Mabini_Batangas_Province_Calabarzon_Region_.html" target="_blank" rel="noopener" class="soc" aria-label="TripAdvisor"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-h">This Showcase</div>
+        <ul class="foot-links">
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#gallery">Content Gallery</a></li>
+          <li><a href="#plan">90-Day Plan</a></li>
+          <li><a href="research.html">Market Research</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">The Resort</div>
+        <ul class="foot-links">
+          <li><a href="https://www.casaescondida-anilao.com/dive.html" target="_blank" rel="noopener">Dive Center</a></li>
+          <li><a href="https://www.casaescondida-anilao.com/rooms.html" target="_blank" rel="noopener">Rooms &amp; Suites</a></li>
+          <li><a href="https://www.casaescondida-anilao.com/gallery.html" target="_blank" rel="noopener">Photo Gallery</a></li>
+          <li><a href="https://www.casaescondida-anilao.com/location.html" target="_blank" rel="noopener">Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">TechNext</div>
+        <ul class="foot-links">
+          <li><a href="mailto:hello@technext.asia">hello@technext.asia</a></li>
+          <li><a href="https://technext.asia" target="_blank" rel="noopener">technext.asia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-copy">© 2026 · Digital Marketing Showcase for Casa Escondida Anilao</div>
+      <div class="foot-legal">
+        <span style="opacity:.4">Curated by</span>
+        <a href="https://technext.asia" target="_blank" rel="noopener">Powered by <span class="tn-brand">TechNext Asia</span></a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<script src="app.js?v=1" defer></script>
+<script src="app.js?v=2" defer></script>
 </body>
 </html>
