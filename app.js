@@ -5,10 +5,12 @@ var fine   = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:
 
 // ── Ambient day <-> night cycle (slow) — recolours the whole site + shows orbs ──
 (function(){
-  var isNight = false;
+  var root = document.documentElement;
+  var isNight = /[?&]night/.test(location.search);   // ?night forces night (demo/verify)
+  if(isNight) root.classList.add('night');
   setInterval(function(){
     isNight = !isNight;
-    document.documentElement.classList.toggle('night', isNight);
+    root.classList.toggle('night', isNight);
   }, 13000);
 })();
 
