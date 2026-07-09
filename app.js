@@ -155,6 +155,18 @@ if(fine && !reduce){
   });
 })();
 
+// ── Video reels/clips: play on hover (and tap), pause on leave ──
+(function(){
+  document.querySelectorAll('[data-video]').forEach(function(box){
+    var v = box.querySelector('video'); if(!v) return;
+    function play(){ box.classList.add('playing'); var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
+    function stop(){ box.classList.remove('playing'); try{v.pause();}catch(e){} }
+    box.addEventListener('mouseenter', play);
+    box.addEventListener('mouseleave', stop);
+    box.addEventListener('click', function(){ if(v.paused) play(); else stop(); });
+  });
+})();
+
 // ── Smooth in-page anchor scroll ──
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click', function(e){

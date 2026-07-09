@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css?v=6"/>
+<link rel="stylesheet" href="styles.css?v=7"/>
 </head>
 <body>
 <div id="pg-bar"></div>
@@ -113,44 +113,74 @@
     <div class="sec-head rv">
       <div class="sec-eyebrow">01 · Social Media Posting</div>
       <h2 class="sec-h2">A feed worth <em>following</em></h2>
-      <p class="sec-sub">Where divers scroll, Casa Escondida shows up — beautiful, consistent, and always inviting the next booking. Here's the shape of the feed. <b>Hover a post</b> to preview.</p>
+      <p class="sec-sub">Where divers scroll, Casa Escondida shows up — beautiful, consistent, and always inviting the next booking. A feed of ready-to-post reels. <b>Hover a post</b> to play.</p>
       <div class="pillar-tags">
         <span class="pillar-tag">Instagram</span><span class="pillar-tag">Facebook</span><span class="pillar-tag">TikTok</span><span class="pillar-tag">Reels &amp; Stories</span>
       </div>
     </div>
-    <div class="feed-grid">
+    <div class="feed-grid" id="feedGrid">
       <article class="post tilt rv d1"><div class="spot"></div>
         <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
-        <div class="post-media" data-lightbox="img/showcase/uw-3.webp" data-cap="Social post 01 — macro of the day"><img src="img/showcase/uw-3.webp" alt="preview" loading="lazy"/><div class="post-ph"><span class="pn">01</span><span class="pl">Post · Soon</span></div><span class="post-hint">Hover to preview</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s1.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
         <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
       </article>
       <article class="post tilt rv d2"><div class="spot"></div>
         <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
-        <div class="post-media" data-lightbox="img/showcase/rf-1.webp" data-cap="Social post 02 — turtle encounter"><img src="img/showcase/rf-1.webp" alt="preview" loading="lazy"/><div class="post-ph"><span class="pn">02</span><span class="pl">Post · Soon</span></div><span class="post-hint">Hover to preview</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s2.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
         <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
       </article>
       <article class="post tilt rv d3"><div class="spot"></div>
         <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
-        <div class="post-media" data-lightbox="img/showcase/uw-6.webp" data-cap="Social post 03 — critter close-up"><img src="img/showcase/uw-6.webp" alt="preview" loading="lazy"/><div class="post-ph"><span class="pn">03</span><span class="pl">Post · Soon</span></div><span class="post-hint">Hover to preview</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s3.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
         <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
       </article>
       <article class="post tilt rv d4"><div class="spot"></div>
         <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
-        <div class="post-media" data-lightbox="img/showcase/rf-3.webp" data-cap="Social post 04 — reef scene"><img src="img/showcase/rf-3.webp" alt="preview" loading="lazy"/><div class="post-ph"><span class="pn">04</span><span class="pl">Post · Soon</span></div><span class="post-hint">Hover to preview</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s4.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
         <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
       </article>
       <article class="post tilt rv d5"><div class="spot"></div>
         <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
-        <div class="post-media" data-lightbox="img/showcase/uw-1.jpg" data-cap="Social post 05 — flamboyant cuttlefish"><img src="img/showcase/uw-1.jpg" alt="preview" loading="lazy"/><div class="post-ph"><span class="pn">05</span><span class="pl">Post · Soon</span></div><span class="post-hint">Hover to preview</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s5.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
+      </article>
+      <article class="post tilt rv d6"><div class="spot"></div>
+        <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s6.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
+      </article>
+      <article class="post tilt rv d1"><div class="spot"></div>
+        <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s7.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
+      </article>
+      <article class="post tilt rv d2"><div class="spot"></div>
+        <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s8.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
+      </article>
+      <article class="post tilt rv d3"><div class="spot"></div>
+        <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s9.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
+      </article>
+      <article class="post tilt rv d4"><div class="spot"></div>
+        <div class="post-head"><span class="post-ava"><img src="img/logo-white.webp" alt=""/></span><div class="post-hmeta"><b>casaescondidaanilao</b><span>Anilao, Batangas</span></div><span class="post-dots">···</span></div>
+        <div class="post-media" data-video><video class="pv" src="img/social/s10.mp4#t=0.5" muted loop playsinline preload="metadata"></video><span class="post-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
         <div class="post-actions"><svg class="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="post-cap"><div class="cl w80"><span class="skeleton"></span></div><div class="cl w55"><span class="skeleton"></span></div></div>
       </article>
     </div>
-    <p class="panel-note rv" style="text-align:center;margin-top:1.4rem;">5 placeholder posts — the real content calendar drops straight into this feed.</p>
+    <p class="panel-note rv" style="text-align:center;margin-top:1.4rem;">10 sample reels — hover any post to play. The real content calendar drops straight into this feed.</p>
   </div>
 </section>
 
@@ -160,7 +190,7 @@
     <div class="sec-head rv">
       <div class="sec-eyebrow">02 · Website</div>
       <h2 class="sec-h2">The whole experience, <em>one place</em></h2>
-      <p class="sec-sub">Social sparks the interest — the website closes the booking. Fast, beautiful, and easy to reserve. <b>Hover to scroll</b> the full page.</p>
+      <p class="sec-sub">Social sparks the interest — the website closes the booking. Fast, beautiful, and easy to reserve. This is <b>the live site</b>, right here — scroll and click inside.</p>
       <div class="pillar-tags">
         <span class="pillar-tag">Mobile-First</span><span class="pillar-tag">Direct Bookings</span><span class="pillar-tag">Found by AI</span>
       </div>
@@ -174,28 +204,13 @@
           <span class="browser-url"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>casaescondida-anilao.com</span>
         </div>
         <div class="browser-screen">
-          <div class="browser-scroll">
-            <div class="msite-hero">
-              <img src="img/hero-poster.jpg" alt=""/>
-              <div class="mh-txt"><div class="mh-eyebrow">PADI 5-Star Dive Resort</div><div class="mh-title">Casa Escondida Anilao</div></div>
-            </div>
-            <div class="msite-body">
-              <div class="msite-line w40"></div>
-              <div class="msite-row"><div class="msite-block"><span class="skeleton"></span></div><div class="msite-block"><span class="skeleton"></span></div><div class="msite-block"><span class="skeleton"></span></div></div>
-              <div class="msite-line w70"></div>
-              <div class="msite-line"></div>
-              <div class="msite-row"><div class="msite-block"><span class="skeleton"></span></div><div class="msite-block"><span class="skeleton"></span></div><div class="msite-block"><span class="skeleton"></span></div></div>
-              <div class="msite-line w70"></div>
-              <div class="msite-line w40"></div>
-              <div class="msite-row"><div class="msite-block"><span class="skeleton"></span></div><div class="msite-block"><span class="skeleton"></span></div><div class="msite-block"><span class="skeleton"></span></div></div>
-            </div>
-          </div>
+          <iframe class="site-frame" src="https://www.casaescondida-anilao.com/" title="Casa Escondida Anilao — live website" loading="lazy" referrerpolicy="no-referrer"></iframe>
         </div>
       </div>
       <div class="web-note">
-        <a href="https://www.casaescondida-anilao.com/" target="_blank" rel="noopener" class="btn btn-primary on-light">Open the Live Site
+        <a href="https://www.casaescondida-anilao.com/" target="_blank" rel="noopener" class="btn btn-primary on-light">Open in a New Tab
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M7 7h10v10"/></svg></a>
-        <p class="panel-note" style="margin-top:1rem;">1 placeholder preview — the finished design lands right here.</p>
+        <p class="panel-note" style="margin-top:1rem;">The live casaescondida-anilao.com, embedded.</p>
       </div>
     </div>
   </div>
@@ -207,7 +222,7 @@
     <div class="sec-head rv">
       <div class="sec-eyebrow">03 · AI Video &amp; Image Generation</div>
       <h2 class="sec-h2">Cinematic visuals, <em>on demand</em></h2>
-      <p class="sec-sub">No boat, no film crew, no waiting on weather. We generate polished imagery and promo video for ads, reels and the website. <b>Hit Generate</b> to fill a slot.</p>
+      <p class="sec-sub">No boat, no film crew, no waiting on weather. The clips below are AI-generated promo video for ads, reels and the website. <b>Hover a clip</b> to play — and <b>hit Generate</b> to add a still.</p>
     </div>
 
     <div class="ai-toolbar rv">
@@ -215,15 +230,25 @@
       <button class="ai-gen-btn" id="genBtn"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>Generate</button>
     </div>
 
-    <div class="ai-grid six" id="aiGrid">
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Slot 01 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Slot 02 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Slot 03 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Slot 04 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Slot 05 · Generate</span></span></div>
-      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Slot 06 · Generate</span></span></div>
+    <div class="ai-grid four" id="aiGrid">
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a1.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a2.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a3.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a4.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a5.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a6.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a7.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt filled video" data-video><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>AI Video</span><video class="av" src="img/ai/a8.mp4#t=0.5" muted loop playsinline preload="metadata"></video></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 01 · Generate</span></span></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 02 · Generate</span></span></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 03 · Generate</span></span></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 04 · Generate</span></span></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 05 · Generate</span></span></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 06 · Generate</span></span></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 07 · Generate</span></span></div>
+      <div class="ai-card2 tilt" data-slot><div class="spot"></div><span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>AI Image</span><img alt="" loading="lazy"/><span class="ai-scan"></span><span class="ai-empty"><span class="sparkle">✦</span><span class="lbl">Still 08 · Generate</span></span></div>
     </div>
-    <p class="panel-note rv" style="text-align:center;margin-top:1.4rem;">6 placeholder slots — hit Generate to preview, or click a filled image to enlarge. Final AI sets land here.</p>
+    <p class="panel-note rv" style="text-align:center;margin-top:1.4rem;">8 AI video clips + 8 image slots — hover a clip to play, hit Generate to fill a still.</p>
   </div>
 </section>
 
@@ -247,6 +272,6 @@
   <div class="lb-cap" id="lbCap"></div>
 </div>
 
-<script src="app.js?v=6" defer></script>
+<script src="app.js?v=7" defer></script>
 </body>
 </html>
