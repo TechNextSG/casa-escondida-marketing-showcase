@@ -553,6 +553,7 @@ img{display:block;max-width:100%;}
 
 /* ── WEBSITE — single whole-site view ── */
 .web-wrap{max-width:100%;margin:0 auto;}
+#website .inner{max-width:1560px;}
 .web-note{text-align:center;margin-top:1.3rem;}
 
 /* ── AI grid: 6 (3×2) ── */
